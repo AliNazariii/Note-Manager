@@ -1,0 +1,87 @@
+.root-index {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #000000;
+    margin: -10px;
+}
+
+.root-app {
+    text-align: center;
+    width: 1350px;
+}
+
+.new-note-button {
+    color: #000000;
+    background-color: #2dc252;
+    border-color: #2dc252;
+    border-radius: 5px;
+    height: 30px;
+    margin-left: 1024px;
+}
+
+.main-layout {
+    display: flex;
+}
+
+.note-view {
+    width: 70%;
+    margin: 30px;
+}
+
+.notes-list {
+    width: 30%;
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.note-detail {
+    text-align: left;
+    height: 100px;
+}
+
+.three-button-div {
+    display: flex;
+    height: 120px;
+}
+
+.notes-button {
+    color: #000000;
+    background-color: #ffe159;
+    border-color: #ffe159;
+    border-radius: 5px;
+    height: 30px;
+    margin: 10px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.edit-button {
+    color: #000000;
+    background-color: #3898d8;
+    border-color: #3898d8;
+    border-radius: 5px;
+    height: 30px;
+    margin: 10px; 
+    width: 70px;
+    margin-right: 2px;
+}
+
+.delete-button {
+    color: #000000;
+    background-color: #ee4a4a;
+    border-color: #ee4a4a;
+    border-radius: 5px;
+    height: 30px;
+    margin: 10px; 
+    width: 70px;
+    margin-left: 0px;
+}
+
+* {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #ffe159;
+}
