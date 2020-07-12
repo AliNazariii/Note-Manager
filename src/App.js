@@ -1,10 +1,13 @@
 import React from 'react';
-import './App.css';
+import Styles from './Styles.module.scss';
+import NoteList from './Components/NoteList';
+import Content from './Components/Content';
 
 function App() {
 	return (
-		<div className="App">
-			
+		<div className={Styles.App}>
+			<NoteList />
+			<Content />
 		</div>
 	);
 }
