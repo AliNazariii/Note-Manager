@@ -3,7 +3,9 @@ import Styles from '../Styles.module.scss';
 
 function NoteListItem() {
     return(
-        <h1>1</h1>
+        <div className={Styles.NoteListItem}>
+            <h5>title</h5>
+        </div>
     )
 }
 

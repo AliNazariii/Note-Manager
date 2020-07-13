@@ -1,5 +1,6 @@
 import React from 'react';
 import Styles from '../Styles.module.scss';
+import NoteListItem from './NoteListItem';
 import { InputGroup, InputGroupAddon, InputGroupText, Input } from 'reactstrap'
 import { BsSearch } from "react-icons/bs";
 
@@ -12,6 +13,11 @@ function NoteList() {
                 </InputGroupAddon>
                 <Input placeholder="Search" />
             </InputGroup>
+            <hr className={Styles.hr} />
+            <NoteListItem />
+            <hr className={Styles.hr} />
+            <NoteListItem />
+            <hr className={Styles.hr} />
         </div>
     )
 }
