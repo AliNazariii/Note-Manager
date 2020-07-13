@@ -1,19 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Styles from './Styles.module.scss';
 import NoteList from './Components/NoteList';
 import Content from './Components/Content';
-
+import NoteContext from './NoteContext'
 function App() {
-	const [data, setData] = useState()
-	let savedData = localStorage.getItem('notes')
-	if (savedData) {
-		setData()
-	}
-	console.log(savedData)
 	return (
 		<div className={Styles.App}>
+			<NoteContext.Provider value={{notes: localStorage.getItem('myNotes')}}>
 			<NoteList />
-			<Content />
+			<Content /></NoteContext.Provider>
 		</div>
 	);
 }
