@@ -16,7 +16,7 @@ function Content() {
                     onClick={toggle}
                     outline>   
                     <IoIosAddCircle size="2em" />
-                </Button> 
+                </Button>
                 <h5>Januaflmekameflakmwdmlwkfdmla</h5>
                 <Button color="info" outline>   
                     <MdDelete size="2em" />

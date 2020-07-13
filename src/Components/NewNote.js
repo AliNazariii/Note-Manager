@@ -1,19 +1,47 @@
-import React from 'react';
-import Styles from '../Styles.module.scss';
-import { Modal, ModalHeader, ModalBody, ModalFooter, Button } from 'reactstrap'
+import React, { useState } from 'react';
+import { Modal, ModalHeader, ModalBody, ModalFooter, Button, Input, Form, FormGroup } from 'reactstrap'
 
 function NewNote(props) {
+    const [note, setNote] = useState({
+        title: null,
+        text: null
+    })
+
+    const onSubmit = () => {
+        console.log(note)
+    }
+    const onChange = (e) => {
+        setNote({
+            ...note,
+            [e.target.name]: e.target.value
+        })
+    }
     return(
-        <Modal isOpen={props.visibility} toggle={props.toggleFunction}>
-            <ModalHeader toggle={props.toggleFunction}>New Note</ModalHeader>
-            <ModalBody>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </ModalBody>
-            <ModalFooter>
-                <Button color="secondary" onClick={props.toggleFunction}>Cancel</Button>
-                <Button color="primary" onClick={props.toggleFunction}>Submit</Button>
-            </ModalFooter>
-        </Modal>
+        <Form onSubmit={onSubmit}>
+            <Modal isOpen={props.visibility} toggle={props.toggleFunction}>
+                <ModalHeader toggle={props.toggleFunction}>New Note</ModalHeader>
+                <ModalBody>
+                    <FormGroup>
+                        <Input onChange={onChange} style={{margin: "0 0 10px 0"}} type="text" name="title" placeholder="Title" />
+                    </FormGroup>
+                    <FormGroup>
+                        <Input onChange={onChange} type="textarea" name="text" placeholder="Your Note Text" />
+                    </FormGroup>
+                </ModalBody>
+                <ModalFooter>
+                    <Button color="secondary" onClick={props.toggleFunction}>
+                        Cancel
+                    </Button>
+                    <Button color="info" type="submit"
+                        onClick={() => {
+                            onSubmit()
+                            props.toggleFunction()
+                        }}>
+                        Submit
+                    </Button>
+                </ModalFooter>
+            </Modal>
+        </Form>
     )
 }
 
