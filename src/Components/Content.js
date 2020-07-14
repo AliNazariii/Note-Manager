@@ -24,11 +24,13 @@ function Content(props) {
                             <h5>{context.currentNote !== false ? context.notes[context.currentNote].title : null}</h5>
                             <Button color="info" outline
                                 onClick={() => {
+                                    let tempNotes = context.notes;
+                                    tempNotes.splice(context.currentNote, 1)
+                                    context.setNotes(tempNotes)
+                                    localStorage.setItem('myNotes', 
+                                        JSON.stringify(tempNotes))
                                     context.setCurrent(false)
                                     localStorage.setItem('currentNote', false)
-                                    context.setNotes(context.notes.splice(context.currentNote, 1))
-                                    localStorage.setItem('myNotes', 
-                                        JSON.stringify(context.notes.splice(context.currentNote, 1)))
                                 }}>   
                                 <MdDelete size="2em" />
                             </Button>
