@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/AliNazariii/Note-Manager/static/css/main.a6ed9de6.chunk.css",
+    "main.js": "/AliNazariii/Note-Manager/static/js/main.428a3a3f.chunk.js",
+    "main.js.map": "/AliNazariii/Note-Manager/static/js/main.428a3a3f.chunk.js.map",
+    "runtime-main.js": "/AliNazariii/Note-Manager/static/js/runtime-main.003c2b07.js",
+    "runtime-main.js.map": "/AliNazariii/Note-Manager/static/js/runtime-main.003c2b07.js.map",
+    "static/css/2.af3c1da9.chunk.css": "/AliNazariii/Note-Manager/static/css/2.af3c1da9.chunk.css",
+    "static/js/2.684a6f29.chunk.js": "/AliNazariii/Note-Manager/static/js/2.684a6f29.chunk.js",
+    "static/js/2.684a6f29.chunk.js.map": "/AliNazariii/Note-Manager/static/js/2.684a6f29.chunk.js.map",
+    "index.html": "/AliNazariii/Note-Manager/index.html",
+    "precache-manifest.ca3cc2a8a4f0ed9f630b63cf1467a88d.js": "/AliNazariii/Note-Manager/precache-manifest.ca3cc2a8a4f0ed9f630b63cf1467a88d.js",
+    "service-worker.js": "/AliNazariii/Note-Manager/service-worker.js",
+    "static/css/2.af3c1da9.chunk.css.map": "/AliNazariii/Note-Manager/static/css/2.af3c1da9.chunk.css.map",
+    "static/css/main.a6ed9de6.chunk.css.map": "/AliNazariii/Note-Manager/static/css/main.a6ed9de6.chunk.css.map",
+    "static/js/2.684a6f29.chunk.js.LICENSE.txt": "/AliNazariii/Note-Manager/static/js/2.684a6f29.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.003c2b07.js",
+    "static/css/2.af3c1da9.chunk.css",
+    "static/js/2.684a6f29.chunk.js",
+    "static/css/main.a6ed9de6.chunk.css",
+    "static/js/main.428a3a3f.chunk.js"
+  ]
+}
