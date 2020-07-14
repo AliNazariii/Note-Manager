@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { Modal, ModalHeader, ModalBody, ModalFooter, Button, Input, Form, FormGroup } from 'reactstrap'
+import NoteContext from '../NoteContext';
 
 function NewNote(props) {
     const [note, setNote] = useState({
@@ -7,9 +8,13 @@ function NewNote(props) {
         text: null
     })
 
+    const noteContext = useContext(NoteContext)
+
     const onSubmit = () => {
-        console.log(note)
+        noteContext.setNotes([...noteContext.notes, note])
+        localStorage.setItem('myNotes', JSON.stringify([...noteContext.notes, note]))
     }
+
     const onChange = (e) => {
         setNote({
             ...note,

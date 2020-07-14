@@ -1,8 +1,10 @@
-import React, { createContext } from "react";
+import { createContext } from "react";
 
 const NoteContext = createContext({
-    notes: null,
-    currentNote: null
+    notes: false,
+    setNotes: () => {},
+    currentNote: false,
+    setCurrent: () => {}
 });
 
 export default NoteContext;

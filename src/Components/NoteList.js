@@ -5,13 +5,7 @@ import { InputGroup, InputGroupAddon, InputGroupText, Input } from 'reactstrap'
 import { BsSearch } from "react-icons/bs";
 import NoteContext from '../NoteContext';
 
-function NoteList() {
-    // const [data, setData] = useState()
-	// let savedData = localStorage.getItem('notes')
-	// if (savedData) {
-	// 	setData()
-	// }
-    // console.log(savedData)
+function NoteList(props) {
     // localStorage.setItem('myNotes', JSON.stringify([
     //     {'title': 'test1', 'text': 'text1'},
     //     {'title': 'test2', 'text': 'text2'}
@@ -26,9 +20,9 @@ function NoteList() {
             </InputGroup>
             <hr className={Styles.hr} />
             <NoteContext.Consumer>
-                {context => context.notes && JSON.parse(context.notes).map((note, i) => (
+                {context => context.notes && context.notes.map((note, i) => (
                     <div key={i}>
-                        <NoteListItem index={i} data={note} />
+                        <NoteListItem data={note} index={i} />
                         <hr className={Styles.hr} />    
                     </div>
                 ))}
