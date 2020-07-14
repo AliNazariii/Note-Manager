@@ -6,9 +6,10 @@ import NoteContext from './NoteContext'
 function App() {
 	return (
 		<div className={Styles.App}>
-			<NoteContext.Provider value={{notes: localStorage.getItem('myNotes')}}>
-			<NoteList />
-			<Content /></NoteContext.Provider>
+			<NoteContext.Provider value={{notes: localStorage.getItem('myNotes'), currentNote: localStorage.getItem('currentNote')}}>
+				<NoteList />
+				<Content />
+			</NoteContext.Provider>
 		</div>
 	);
 }

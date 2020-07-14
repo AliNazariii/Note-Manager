@@ -1,10 +1,13 @@
 import React from 'react';
 import Styles from '../Styles.module.scss';
 
-function NoteListItem() {
+function NoteListItem(props) {
     return(
-        <div className={Styles.NoteListItem}>
-            <h5>title</h5>
+        <div className={Styles.NoteListItem} 
+            onClick={() => {
+                localStorage.setItem('currentNote', props.index)
+        }}>
+            <h5>{props.data.title}</h5>
         </div>
     )
 }

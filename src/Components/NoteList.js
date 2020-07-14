@@ -28,7 +28,7 @@ function NoteList() {
             <NoteContext.Consumer>
                 {context => context.notes && JSON.parse(context.notes).map((note, i) => (
                     <div key={i}>
-                        <NoteListItem />
+                        <NoteListItem index={i} data={note} />
                         <hr className={Styles.hr} />    
                     </div>
                 ))}
