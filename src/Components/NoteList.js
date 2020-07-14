@@ -6,10 +6,6 @@ import { BsSearch } from "react-icons/bs";
 import NoteContext from '../NoteContext';
 
 function NoteList(props) {
-    // localStorage.setItem('myNotes', JSON.stringify([
-    //     {'title': 'test1', 'text': 'text1'},
-    //     {'title': 'test2', 'text': 'text2'}
-    // ]))
     return(
         <div className={Styles.NoteList}>
             <InputGroup className={Styles.Search}>
