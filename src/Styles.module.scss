@@ -26,6 +26,7 @@ body {
 .ContentHeader {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin: 30px 50px 10px 50px;
 }
 .ContentText {
@@ -54,4 +55,19 @@ body {
 .hr {
     margin: 0px;
     padding: 0px;
+}
+
+@media screen and (max-width: 600px) {
+    .App {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 2fr;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .ContentHeader {
+        h5 {
+            display: none;
+        }
+    }
 }
